@@ -8,6 +8,7 @@
 
 ### Главно мени
 ![Main menu](https://github.com/petroskin/Dark_Labyrinth/blob/master/mdimage1.png?raw=true)
+
 Главното мени првично се состои од две компоненти - паѓачка листа, во која се бира кое ниво ќе се игра, и копче, со кое започнува даденото ниво. Кога ја започнуваме играта само првото ниво ни е достапно за играње, а со секое поминато ниво се отклучува ново.Во горната лента дадени се опциите “File” и “Help”.
 ### Лента со алатки - “Help”
 “Help” е просто за да даде кратко упатство за кои се контролите за игра и која е целта на играта. 
@@ -16,6 +17,7 @@
 
 ### Ниво
 ![Level](https://github.com/petroskin/Dark_Labyrinth/blob/master/mdimage1.png?raw=true)
+
 Ова е главниот дел на играта. Како што се гледа, поголемиот дел од лавиринтот е затемнет. Како што се движи играчот, така различни делови се откриваат и затемнуваат. Контролите за играта се едноставни - на стрелките се движи играчот, а на ‘space’ копчето користи портал, доколку се наоѓа кај таков. Тие се соодветно прикажани на долната лента - на почетокот на секое ниво кажува дека стрелките се за движење, а кога играчот се наоѓа на портал - дека со ‘space’ се влегува во него.
 ### Лента со алатки - “Help”
 Повторно, “Help” служи за да даде кратко упатство за кои се контролите за игра и која е целта на играта. 
@@ -37,12 +39,12 @@ public abstract class Field
 {
     public int coordX { get;  set; }
     public int coordY { get;  set; }
-    public Field(int X, int Y) {…}
+    public Field(int X, int Y) {...}
 
     // everything is drawn differently
     public abstract void draw(Graphics g, int panelWidth, int mazeSize);
     //almost everything is shadowed the same
-    public virtual void shadow(Graphics g, int panelWidth, int mazeSize) {…}
+    public virtual void shadow(Graphics g, int panelWidth, int mazeSize) {...}
 }
 ```
 
@@ -54,14 +56,14 @@ public class Player
     public Field [,] fields { get; set; }
     public int coordX { get; set; }
     public int coordY { get; set; }
-    public Player(Field[,] gameFields, int X, int Y) {…}
+    public Player(Field[,] gameFields, int X, int Y) {...}
     // Level.MoveDirection is enum with move directions
-    public bool move(Level.MoveDirection direction) {…}
-    private bool moveUp() {…}
-    private bool moveDown() {…}
-    private bool moveLeft() {…}
-    private bool moveRight() {…}
-    public bool teleport(int X, int Y) {…}
+    public bool move(Level.MoveDirection direction) {...}
+    private bool moveUp() {...}
+    private bool moveDown() {...}
+    private bool moveLeft() {...}
+    private bool moveRight() {...}
+    public bool teleport(int X, int Y) {...}
 }
 ```
 
